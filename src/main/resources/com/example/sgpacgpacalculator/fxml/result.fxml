@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.sgpacgpacalculator.controller.ResultController"
+            stylesheets="@style/styles.css">
+
+    <!-- Main Container -->
+    <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+
+        <!-- Title -->
+        <Label styleClass="header-label" text="Calculation Results" />
+
+        <!-- Results Display -->
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20; -fx-background-color: rgba(255, 255, 255, 0.9); -fx-background-radius: 10;">
+            <HBox spacing="15">
+                <Label text="SGPA:" styleClass="input-label-new" />
+                <Label fx:id="sgpaLabel" styleClass="result-label" text="0.0" />
+            </HBox>
+            <HBox spacing="15">
+                <Label text="CGPA:" styleClass="input-label-new" />
+                <Label fx:id="cgpaLabel" styleClass="result-label" text="0.0" />
+            </HBox>
+            <HBox spacing="15">
+                <Label text="Result:" styleClass="input-label-new" />
+                <Label fx:id="finalResultLabel" styleClass="result-label" text="Result will be displayed here" />
+            </HBox>
+        </VBox>
+
+        <!-- Back Button -->
+        <Button onAction="#handleBack" styleClass="back-button" text="Back" />
+    </VBox>
+</AnchorPane>

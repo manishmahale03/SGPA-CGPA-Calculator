@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sgpacgpacalculator.controller.CGPAController" stylesheets="@style/styles.css" styleClass="root">
+
+    <!-- Main Container -->
+    <VBox fx:id="mainVBox" alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+
+        <!-- Title -->
+        <Label styleClass="header-label" text="CGPA Calculator" />
+
+        <!-- GridPane for semester entries -->
+        <GridPane fx:id="semesterGrid" alignment="CENTER" hgap="10" vgap="10" style="-fx-pref-width: 100%;">
+            <!-- Column Headers -->
+            <Label text="Semester" styleClass="input-label" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="SGPA" styleClass="input-label" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <!-- Initial Semester Entry -->
+            <Label text="Semester 1" styleClass="input-label" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="sgpaField1" promptText="SGPA" styleClass="input-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        </GridPane>
+
+        <!-- Add and Remove Semester Buttons in a Single Row -->
+        <HBox alignment="CENTER" spacing="10">
+            <Button fx:id="addSemesterButton" onAction="#handleAddSemester" styleClass="action-button" text="Add Semester" />
+            <Button fx:id="removeSemesterButton" onAction="#handleRemoveSemester" styleClass="action-button" text="Remove Semester" />
+        </HBox>
+
+        <!-- Button to calculate CGPA -->
+        <Button onAction="#handleCalculateCGPA" styleClass="action-button" text="Calculate CGPA" />
+
+        <!-- Result Label with Word Wrap -->
+        <Label fx:id="resultLabel" styleClass="result-label" text="Result will be displayed here" wrapText="true" />
+
+        <!-- Back Button -->
+        <Button onAction="#handleBack" styleClass="back-button" text="Back" />
+    </VBox>
+</StackPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane styleClass="root" stylesheets="@style/styles.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sgpacgpacalculator.controller.LoginController">
+    <VBox alignment="CENTER" spacing="15" styleClass="form-container">
+        <Label styleClass="login-title" text="Login to Your Account" />
+        <Label fx:id="loginMessageLabel" styleClass="label-error" text="" />
+
+        <!-- Username Input with Label -->
+        <VBox alignment="CENTER_LEFT" spacing="5">
+            <Label styleClass="input-label-new" text="Username" />
+            <TextField fx:id="usernameField" promptText="Enter your username" styleClass="text-field-new" />
+        </VBox>
+
+        <!-- Password Input with Label -->
+        <VBox alignment="CENTER_LEFT" spacing="5">
+            <Label styleClass="input-label-new" text="Password" />
+            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="text-field-new" />
+        </VBox>
+
+        <!-- Buttons -->
+        <Button onAction="#handleLogin" styleClass="button" text="Login" />
+        <Label styleClass="welcome-text" text="Don't have an account?" />
+        <Button onAction="#goToRegister" styleClass="nav-button" text="Register" />
+    </VBox>
+</StackPane>

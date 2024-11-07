@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sgpacgpacalculator.controller.SGPAController" stylesheets="@style/styles.css" styleClass="root">
+
+    <!-- Main Container -->
+    <VBox fx:id="mainVBox" alignment="CENTER" spacing="15" style="-fx-padding: 20;">
+        <!-- Title -->
+        <Label styleClass="header-label" text="SGPA Calculator" />
+
+        <!-- GridPane for subject entries -->
+        <GridPane fx:id="subjectsGrid" alignment="CENTER" hgap="10" vgap="10" style="-fx-pref-width: 100%;">
+            <!-- Column Headers -->
+            <Label text="Subject Name" styleClass="input-label" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <Label text="Grade" styleClass="input-label" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            <Label text="Credit Points" styleClass="input-label" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        </GridPane>
+
+        <!-- Add and Remove Subject Buttons -->
+        <HBox alignment="CENTER" spacing="10">
+            <Button fx:id="addSubjectButton" onAction="#handleAddSubject" styleClass="action-button" text="Add Subject" />
+            <Button fx:id="removeSubjectButton" onAction="#handleRemoveSubject" styleClass="action-button" text="Remove Subject" />
+        </HBox>
+
+        <!-- Button to calculate SGPA -->
+        <Button onAction="#calculateSGPA" styleClass="action-button" text="Calculate SGPA" />
+
+        <!-- Result Label -->
+        <Label fx:id="resultLabel" styleClass="result-label" text="Result will be displayed here" wrapText="true" />
+
+        <!-- Back Button -->
+        <Button onAction="#handleBack" styleClass="back-button" text="Back" />
+    </VBox>
+</StackPane>

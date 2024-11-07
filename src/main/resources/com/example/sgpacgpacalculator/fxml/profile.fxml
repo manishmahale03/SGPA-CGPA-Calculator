@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.12"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.example.sgpacgpacalculator.controller.ProfileController"
+           stylesheets="@style/styles.css"
+           styleClass="root">
+
+    <VBox spacing="20" alignment="CENTER">
+        <!-- Profile Icon -->
+        <ImageView fx:id="profileIcon" fitWidth="100" fitHeight="100" preserveRatio="true" />
+
+        <!-- Welcome Text -->
+        <Label fx:id="welcomeText" text="Welcome!" styleClass="login-title" />
+
+        <!-- GridPane for user information -->
+        <GridPane styleClass="form-container" hgap="15" vgap="10" alignment="CENTER">
+            <!-- First Name Field -->
+            <Label text="First Name:" styleClass="input-label-new" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+            <Label fx:id="firstNameLabel" styleClass="input-label-new" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+            <!-- Last Name Field -->
+            <Label text="Last Name:" styleClass="input-label-new" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <Label fx:id="lastNameLabel" styleClass="input-label-new" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+            <!-- Username Field -->
+            <Label text="Username:" styleClass="input-label-new" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+            <Label fx:id="usernameLabel" styleClass="input-label-new" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+            <!-- Email Field -->
+            <Label text="Email:" styleClass="input-label-new" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+            <Label fx:id="emailLabel" styleClass="input-label-new" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+        </GridPane>
+
+        <!-- Action Buttons: Logout and Back -->
+        <HBox spacing="15" alignment="CENTER">
+            <Button text="Logout" onAction="#handleLogout" styleClass="button" />
+            <Button text="Back" onAction="#handleBack" styleClass="button" />
+        </HBox>
+    </VBox>
+</StackPane>

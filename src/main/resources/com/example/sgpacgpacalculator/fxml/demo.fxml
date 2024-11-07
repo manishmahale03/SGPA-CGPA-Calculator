@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml" spacing="20" alignment="CENTER">
+
+    <!-- Orange Header Section -->
+    <Label text="Vert-zute Cauch taliet" alignment="CENTER" style="-fx-background-color: orange; -fx-text-fill: white; -fx-font-size: 24px; -fx-padding: 20;" maxWidth="Infinity" />
+
+    <!-- Button Section -->
+    <GridPane alignment="CENTER" hgap="20" vgap="20">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" />
+            <ColumnConstraints halignment="CENTER" />
+        </columnConstraints>
+
+        <rowConstraints>
+            <RowConstraints valignment="CENTER" />
+            <RowConstraints valignment="CENTER" />
+        </rowConstraints>
+
+        <!-- First Row of Buttons -->
+        <Button text="SGPA" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-background-radius: 50; -fx-padding: 20; -fx-font-size: 16;" />
+        <Button text="Fiú" GridPane.rowIndex="0" GridPane.columnIndex="1" style="-fx-background-radius: 50; -fx-padding: 20; -fx-font-size: 16;" />
+
+        <!-- Second Row of Buttons -->
+        <Button text="SGPA" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-background-radius: 50; -fx-padding: 20; -fx-font-size: 16;" />
+        <Button text="CGPA" GridPane.rowIndex="1" GridPane.columnIndex="1" style="-fx-background-radius: 50; -fx-padding: 20; -fx-font-size: 16;" />
+    </GridPane>
+
+    <!-- Calculate Button -->
+    <Button text="Calculate" style="-fx-background-color: purple; -fx-text-fill: white; -fx-padding: 15; -fx-font-size: 18;" maxWidth="200" />
+</VBox>

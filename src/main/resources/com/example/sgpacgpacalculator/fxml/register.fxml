@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sgpacgpacalculator.controller.RegisterController" stylesheets="@style/styles.css" styleClass="root">
+    <VBox styleClass="form-container" spacing="15" alignment="CENTER">
+        <Label text="Create a New Account" styleClass="login-title" />
+        <Label fx:id="registerMessageLabel" styleClass="label-success" text="" />
+
+        <!-- Username Input with Label -->
+        <VBox alignment="CENTER_LEFT" spacing="5">
+            <Label text="First Name" styleClass="input-label-new" />
+            <TextField fx:id="firstNameField" promptText="Enter your First Name" styleClass="text-field-new" />
+        </VBox>
+
+        <!-- Username Input with Label -->
+        <VBox alignment="CENTER_LEFT" spacing="5">
+            <Label text="Last Name" styleClass="input-label-new" />
+            <TextField fx:id="lastNameField" promptText="Enter your Last Name" styleClass="text-field-new" />
+        </VBox>
+
+        <!-- Username Input with Label -->
+        <VBox alignment="CENTER_LEFT" spacing="5">
+            <Label text="Username" styleClass="input-label-new" />
+            <TextField fx:id="usernameField" promptText="Enter your username" styleClass="text-field-new" />
+        </VBox>
+
+
+        <!-- Password Input with Label -->
+        <VBox alignment="CENTER_LEFT" spacing="5">
+            <Label text="Password" styleClass="input-label-new" />
+            <PasswordField fx:id="passwordField" promptText="Enter your password" styleClass="text-field-new" />
+        </VBox>
+
+        <!-- Email Input with Label -->
+        <VBox alignment="CENTER_LEFT" spacing="5">
+            <Label text="Email" styleClass="input-label-new" />
+            <TextField fx:id="emailField" promptText="Enter your email address" styleClass="text-field-new" />
+        </VBox>
+
+        <!-- Buttons -->
+        <Button text="Register" onAction="#handleRegister" styleClass="button" />
+        <Label text="Already have an account?" styleClass="welcome-text"/>
+        <Button text="Login" onAction="#goToLogin" styleClass="nav-button" />
+    </VBox>
+</StackPane>

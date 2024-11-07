@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sgpacgpacalculator.controller.HomeController" stylesheets="@style/styles.css" styleClass="root">
+    <VBox alignment="CENTER" spacing="15.0">
+        <padding>
+            <Insets bottom="30.0" left="15.0" right="15.0" top="30.0" />
+        </padding>
+        <!-- Title -->
+        <Label styleClass="title" text="SGPA/CGPA Calculator" />
+        <!-- Navigation Buttons -->
+        <Button onAction="#handleCGPA" styleClass="nav-button" text="CGPA" />
+        <Button onAction="#handleSGPA" styleClass="nav-button" text="SGPA" />
+        <Button text="Profile" onAction="#handleProfile" styleClass="button" />
+        <Button onAction="#handleExit" styleClass="button" text="Exit" />
+        <!-- Welcome Text -->
+        <Label fx:id="welcomeText" styleClass="welcome-text" text="Welcome! Choose an option above." />
+    </VBox>
+</StackPane>
